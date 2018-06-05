@@ -1,5 +1,5 @@
 # CSS Spinner
-A collection of lightweight css-only spinners.
+A collection of lightweight css-only spinners. [View demo](https://ajarvis.github.io/css-spinners/dist/)
 
 
 ### Usage
