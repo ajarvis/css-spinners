@@ -17,6 +17,8 @@ website: http://www.adamcjarvis.com
   border-top-color: #1971c2;
   height: 2rem;
   width: 2rem;
+  overflow: hidden;
+  text-indent: 100%;
 }
 
 .spinner-sm {

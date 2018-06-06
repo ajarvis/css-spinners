@@ -23,6 +23,9 @@ $baseSecondaryColor: #d0ebff;
   border-top-color: $basePrimaryColor;
   height: $baseSize;
   width: $baseSize;
+  overflow: hidden; // hide screen reader 'loading...' message
+  text-indent: 100%; // hide screen reader 'loading...' message
+
   &-sm {
     height: $baseSize / 2;
     width: $baseSize / 2;
