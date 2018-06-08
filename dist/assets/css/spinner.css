@@ -53,4 +53,86 @@ website: http://www.adamcjarvis.com
   }
 }
 
+/* ==========================================================================
+   Cube Spinner Indicator
+   ========================================================================== */
+.cube-spinner {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+}
+
+.cube-spinner:after, .cube-spinner:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  -webkit-animation: cubeRotate 2s infinite ease-in-out;
+          animation: cubeRotate 2s infinite ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.cube-spinner:before {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 99;
+}
+
+@-webkit-keyframes cubeRotate {
+  25% {
+    opacity: .7;
+    -webkit-transform: translateX(35px) rotate(-90deg) scale(0.5);
+            transform: translateX(35px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(35px) translateY(35px) rotate(-179deg);
+            transform: translateX(35px) translateY(35px) rotate(-179deg);
+  }
+  50.1% {
+    -webkit-transform: translateX(35px) translateY(35px) rotate(-180deg);
+            transform: translateX(35px) translateY(35px) rotate(-180deg);
+  }
+  75% {
+    opacity: .7;
+    -webkit-transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+            transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes cubeRotate {
+  25% {
+    opacity: .7;
+    -webkit-transform: translateX(35px) rotate(-90deg) scale(0.5);
+            transform: translateX(35px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(35px) translateY(35px) rotate(-179deg);
+            transform: translateX(35px) translateY(35px) rotate(-179deg);
+  }
+  50.1% {
+    -webkit-transform: translateX(35px) translateY(35px) rotate(-180deg);
+            transform: translateX(35px) translateY(35px) rotate(-180deg);
+  }
+  75% {
+    opacity: .7;
+    -webkit-transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+            transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 /*# sourceMappingURL=maps/spinner.css.map */
