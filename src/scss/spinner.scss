@@ -8,7 +8,7 @@ website: http://www.adamcjarvis.com
    Config
    ========================================================================== */
 $baseSize: 2rem;
-$baseSpeed: 900ms;
+$baseSpeed: 1000ms;
 $basePrimaryColor: #1971c2;
 $baseSecondaryColor: #d0ebff;
 
@@ -60,6 +60,8 @@ $baseSecondaryColor: #d0ebff;
 /* ==========================================================================
    Cube Spinner Indicator
    ========================================================================== */
+$cubeSpeed: $baseSpeed * 2;
+
 .cube-spinner {
   position: relative;
   height: 50px;
@@ -68,18 +70,18 @@ $baseSecondaryColor: #d0ebff;
   text-indent: 100%; // hide screen reader 'loading...' message
 
   &:after, &:before  {
-    background-color: rgba(0,0,0,.5);
+    background-color: $basePrimaryColor;
     content: " ";
     display: block;
     height: 15px;
     width: 15px;
     position: absolute;
-    animation: cubeRotate 2s infinite ease-in-out;
+    animation: cubeRotate $cubeSpeed infinite ease-in-out;
     top: 0;
     left: 0;
   }
   &:before {
-    animation-delay: -1s;
+    animation-delay: $cubeSpeed / 2;
     z-index: 99;
   }
 }
@@ -102,5 +104,59 @@ $baseSecondaryColor: #d0ebff;
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+
+/* ==========================================================================
+   Cube Stacked Spinner Indicator
+   ========================================================================== */
+
+   $cubeSpeed: $baseSpeed * 2;
+
+.cube-stacked-spinner {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  overflow: hidden; // hide screen reader 'loading...' message
+  text-indent: 100%; // hide screen reader 'loading...' message
+
+  &:after, &:before {
+    background-color: $basePrimaryColor;
+    border-radius: 3px;
+    content: " ";
+    display: block;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    animation: cubeSlide $cubeSpeed infinite ease-in-out;
+    top: 20px;
+    left: 20px;
+  }
+  &:before {
+    background-color: $baseSecondaryColor;
+    animation-delay: $cubeSpeed / 2.5;
+    z-index: 99;
+  }
+ 
+}
+
+@keyframes cubeSlide {
+  25% { 
+    transform: rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform:rotate(-179deg);
+    opacity: .7;
+  }
+  51% {
+    transform:rotate(-180deg);
+    opacity: .7;
+  }
+  75% {
+    transform: rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-0) scale(1);
   }
 }

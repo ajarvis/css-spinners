@@ -10,8 +10,8 @@ website: http://www.adamcjarvis.com
    Spinner Indicator
    ========================================================================== */
 .spinner {
-  -webkit-animation: spin 900ms infinite linear;
-          animation: spin 900ms infinite linear;
+  -webkit-animation: spin 1000ms infinite linear;
+          animation: spin 1000ms infinite linear;
   border-radius: 50%;
   border: 0.2rem solid #d0ebff;
   border-top-color: #1971c2;
@@ -65,21 +65,21 @@ website: http://www.adamcjarvis.com
 }
 
 .cube-spinner:after, .cube-spinner:before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1971c2;
   content: " ";
   display: block;
   height: 15px;
   width: 15px;
   position: absolute;
-  -webkit-animation: cubeRotate 2s infinite ease-in-out;
-          animation: cubeRotate 2s infinite ease-in-out;
+  -webkit-animation: cubeRotate 2000ms infinite ease-in-out;
+          animation: cubeRotate 2000ms infinite ease-in-out;
   top: 0;
   left: 0;
 }
 
 .cube-spinner:before {
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
   z-index: 99;
 }
 
@@ -132,6 +132,88 @@ website: http://www.adamcjarvis.com
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
+  }
+}
+
+/* ==========================================================================
+   Cube Stacked Spinner Indicator
+   ========================================================================== */
+.cube-stacked-spinner {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  text-indent: 100%;
+}
+
+.cube-stacked-spinner:after, .cube-stacked-spinner:before {
+  background-color: #1971c2;
+  border-radius: 3px;
+  content: " ";
+  display: block;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  -webkit-animation: cubeSlide 2000ms infinite ease-in-out;
+          animation: cubeSlide 2000ms infinite ease-in-out;
+  top: 20px;
+  left: 20px;
+}
+
+.cube-stacked-spinner:before {
+  background-color: #d0ebff;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+  z-index: 99;
+}
+
+@-webkit-keyframes cubeSlide {
+  25% {
+    -webkit-transform: rotate(-90deg) scale(0.5);
+            transform: rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: rotate(-179deg);
+            transform: rotate(-179deg);
+    opacity: .7;
+  }
+  51% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    opacity: .7;
+  }
+  75% {
+    -webkit-transform: rotate(-270deg) scale(0.5);
+            transform: rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes cubeSlide {
+  25% {
+    -webkit-transform: rotate(-90deg) scale(0.5);
+            transform: rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: rotate(-179deg);
+            transform: rotate(-179deg);
+    opacity: .7;
+  }
+  51% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    opacity: .7;
+  }
+  75% {
+    -webkit-transform: rotate(-270deg) scale(0.5);
+            transform: rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
   }
 }
 
