@@ -2,11 +2,12 @@
 Author: Adam Jarvis
 Email: adam@adamcjarvis.com
 website: http://www.adamcjarvis.com
-----------------------------------------------------------*/
+---------------------------------------------------------- */
 /* ==========================================================================
    Page Layout
    ========================================================================== */
-html, body {
+html,
+body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
 }
