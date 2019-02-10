@@ -100,8 +100,8 @@ website: http://www.adamcjarvis.com
   }
   75% {
     opacity: .7;
-    -webkit-transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
-            transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0) translateY(35px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(35px) rotate(-270deg) scale(0.5);
   }
   100% {
     -webkit-transform: rotate(-360deg);
@@ -126,8 +126,8 @@ website: http://www.adamcjarvis.com
   }
   75% {
     opacity: .7;
-    -webkit-transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
-            transform: translateX(0px) translateY(35px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0) translateY(35px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(35px) rotate(-270deg) scale(0.5);
   }
   100% {
     -webkit-transform: rotate(-360deg);
