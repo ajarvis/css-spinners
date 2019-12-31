@@ -43,9 +43,7 @@ var sassOptions = {
   outputStyle: 'expanded',
   importer: tildeImporter
 };
-var prefixerOptions = {
-  browsers: ['last 2 versions']
-};
+
 function styles() {
   return gulp
     .src(bases.app + 'scss/*.scss')
@@ -60,7 +58,7 @@ function styles() {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
-    .pipe(prefix(prefixerOptions))
+    .pipe(prefix())
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist + 'assets/css'))
     .pipe(browsersync.stream());
